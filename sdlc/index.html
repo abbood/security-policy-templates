@@ -1,0 +1,2260 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="rovera Security Policies, Standards, and Procedures">
+      
+      
+      
+        <link rel="canonical" href="http://www.bbc.com/security/sdlc/">
+      
+      
+        <link rel="prev" href="../data-protection/">
+      
+      
+        <link rel="next" href="../ccm/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>14. Secure Software Development and Product Security - rovera Security PSP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#secure-software-development-and-product-security" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="rovera Security PSP" class="md-header__button md-logo" aria-label="rovera Security PSP" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            rovera Security PSP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              14. Secure Software Development and Product Security
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="rovera Security PSP" class="md-nav__button md-logo" aria-label="rovera Security PSP" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    rovera Security PSP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Security Program Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../corp-gov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Corporate Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Policy Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Security Architecture and Operating Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Roles, Responsibilities and Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Risk Management and Risk Assessment Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Compliance Audits and External Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. System Audits, Monitoring and Assessments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. HR and Personnel Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Facility Access and Physical Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Asset Inventory Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Data Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-protection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Data Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    14. Secure Software Development and Product Security
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    14. Secure Software Development and Product Security
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls and Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-development-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Development Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Development Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-development-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure Development Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release Strategy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-code-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source Code Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-level-application-security-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Level Application Security Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-design-and-application-threat-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure Design and Application Threat Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secure Design and Application Threat Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-design-and-devops-security-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Design and DevOps Security Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-control-of-the-application-identification-authentication-authorization-accounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control of the Application (Identification, Authentication, Authorization, Accounting)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free-and-open-source-software-foss-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free and Open Source Software (FOSS) Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-application-security-testing-sast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Application Security Testing (SAST)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-application-security-testing-dast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Application Security Testing (DAST)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic Application Security Testing (DAST)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-of-dynamic-testing-into-automatic-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration of Dynamic testing into automatic tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penetration-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penetration Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Penetration Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-penetration-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Penetration Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responsible-disclore-and-bug-bounty-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsible Disclore and Bug Bounty Program
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsible Disclore and Bug Bounty Program">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-vulnerability-disclosure-bug-bounty-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Vulnerability Disclosure / Bug Bounty Program
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outsourced-software-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outsourced Software Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipaa-best-practices-for-software-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      HIPAA Best Practices for Software Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HIPAA Best Practices for Software Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-only-hipaa-eligible-services-in-the-cloud-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use only HIPAA eligible services in the Cloud (AWS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separate-access-and-data-between-prod-and-non-prod-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Separate access and data between prod and non-prod accounts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-not-log-ephi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do not log ePHI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-the-right-language-in-notices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Include the right language in notices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-analysis-and-compliance-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Analysis and Compliance Assessment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-system-monitoring-and-paging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Production System Monitoring and Paging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Configuration and Change Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Threat Detection and Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuln-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Vulnerability Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mdm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Mobile Device Security and Media Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcdr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Business Continuity and Disaster Recovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Incident Response
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../breach/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Breach Investigation and Notification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vendor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Third Party Security and Vendor Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Privacy Practice and Consent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Addendum and References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_27" id="__nav_27_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_27">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../employee-handbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A. Employee Handbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B. Approved Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-vendors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C. Approved Vendors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    D. Key Definitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-baa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E. HIPAA Business Associate Agreement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    F. HIPAA Controls Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    G. NIST Controls Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    H. Privacy Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookie-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I. Cookie Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr-dpa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    J. GDPR Data Processing Agreement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls and Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-development-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Development Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Development Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-development-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure Development Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Release Strategy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-code-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source Code Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-level-application-security-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      High Level Application Security Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-design-and-application-threat-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure Design and Application Threat Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secure Design and Application Threat Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-design-and-devops-security-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Design and DevOps Security Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-control-of-the-application-identification-authentication-authorization-accounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control of the Application (Identification, Authentication, Authorization, Accounting)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free-and-open-source-software-foss-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free and Open Source Software (FOSS) Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-application-security-testing-sast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Application Security Testing (SAST)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-application-security-testing-dast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Application Security Testing (DAST)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic Application Security Testing (DAST)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-of-dynamic-testing-into-automatic-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration of Dynamic testing into automatic tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penetration-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penetration Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Penetration Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-penetration-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Penetration Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responsible-disclore-and-bug-bounty-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsible Disclore and Bug Bounty Program
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsible Disclore and Bug Bounty Program">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-vulnerability-disclosure-bug-bounty-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Vulnerability Disclosure / Bug Bounty Program
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outsourced-software-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outsourced Software Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipaa-best-practices-for-software-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      HIPAA Best Practices for Software Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HIPAA Best Practices for Software Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-only-hipaa-eligible-services-in-the-cloud-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use only HIPAA eligible services in the Cloud (AWS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separate-access-and-data-between-prod-and-non-prod-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Separate access and data between prod and non-prod accounts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-not-log-ephi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do not log ePHI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-the-right-language-in-notices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Include the right language in notices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-analysis-and-compliance-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Analysis and Compliance Assessment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-system-monitoring-and-paging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Production System Monitoring and Paging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="secure-software-development-and-product-security">Secure Software Development and Product Security<a class="headerlink" href="#secure-software-development-and-product-security" title="Permanent link">&para;</a></h1>
+<p><code>2024.1</code></p>
+<p>rovera development team follows the latest security best practices when
+developing software, and automates security testing throughout development
+lifecycle whenever possible.</p>
+<p>Security is integrated into all phases of rovera product development lifecycle,
+including:</p>
+<ul>
+<li>
+<p>Secure Design:</p>
+<ul>
+<li>App Risk classification</li>
+<li>Security req definition</li>
+<li>Secure application design / RFC</li>
+<li>Threat modeling</li>
+<li>App data flow analysis</li>
+</ul>
+</li>
+<li>
+<p>Secure Development and Testing: </p>
+<ul>
+<li>Secure coding guidelines</li>
+<li>Peer review</li>
+<li>
+<p>Security testing, for example:</p>
+<ul>
+<li>Linting with security rules</li>
+<li>Open source security analysis</li>
+<li>Static secure code analysis</li>
+<li>Dynamic security analysis</li>
+<li>Penetration testing</li>
+</ul>
+</li>
+<li>
+<p>Responsible vulnerability disclosure / bug bounty program</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Remediation: </p>
+<ul>
+<li>Follows defined vulnerability management lifecycle</li>
+<li>Ensures no high risk security vulnerability is in production</li>
+</ul>
+</li>
+</ul>
+<p>Details about the rovera software application architecture and
+security are documented on the <a href="">product development / engineering wiki</a>.</p>
+<h2 id="policy-statements">Policy Statements<a class="headerlink" href="#policy-statements" title="Permanent link">&para;</a></h2>
+<p>rovera policy requires that:</p>
+<p>(a) rovera software engineering and product development is required to follow
+security best practices. Product should be &ldquo;Secure by Design&rdquo; and &ldquo;Secure by
+Default&rdquo;.</p>
+<p>(b) Quality assurance activities must be performed.  This may include</p>
+<ul>
+<li>peer code reviews prior to merging new code into the main development branch
+    (e.g. master branch); and</li>
+<li>thorough product testing before releasing to production (e.g. unit testing
+    and integration testing).</li>
+</ul>
+<p>(c) Risk assessment activities (i.e. threat modeling) must be performed for a
+new product or major changes to an existing product.</p>
+<p>(d) Security requirements must be defined, tracked, and implemented.</p>
+<p>(e) Security analysis must be performed for any open source software and/or
+third-party components and dependencies included in rovera software products.</p>
+<p>(f) Static application security testing (SAST) must be performed throughout
+development and prior to each release.</p>
+<p>(g) Dynamic application security testing (DAST) must be performed prior to each
+release.</p>
+<p>(h) All critical or high severity security findings must be remediated prior to
+each release.</p>
+<p>(i) All critical or high severity vulnerabilities discovered post release must
+be remediated in the next release or within the defined, predetermined timeframe.</p>
+<p>(j) Any exception to the remediation of a finding must be documented and
+approved by the security team.</p>
+<h2 id="controls-and-procedures">Controls and Procedures<a class="headerlink" href="#controls-and-procedures" title="Permanent link">&para;</a></h2>
+<h3 id="software-development-process">Software Development Process<a class="headerlink" href="#software-development-process" title="Permanent link">&para;</a></h3>
+<h4 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h4>
+<p>Software development at rovera follows a release strategy that provides
+traceability for production software changes. Features, enhancements, and bugs
+are written up as Issues in jira. An engineer on a small team proposes changes
+necessary and creates a review for the team (). Continuous integration
+(bamboo hr) kicks off unit and functional tests which pass before changes are
+merged into the repository. Once the review is complete, the changes are now
+deployed to the development environment where regression and end-to-end tests
+are run before the new code replaces the existing in-service code (test then
+deploy model). Small teams can decide to follow a source-control branching
+strategy that makes sense: git-flow, github flow.</p>
+<p>rovera practices continuous delivery of code into production
+through multiple environments: development, testing, production. The deploy
+process and infrastructure roll-out are written as code (using technologies
+such as Terraform and AWS Cloudformation) and managed under source control.</p>
+<p>rovera’s multiple lower environments (dev, test) provide an ecosystem of
+sample data sets that exercise the application and services when test automation
+is run. The test environment is where the system is stressed for performance and
+scalability. Performance and scalability changes are driven by metric data
+captured through monitoring and logging (metrics before and after change –
+typically captured as part of the issue description/writeup).</p>
+<p>Deployments to production are gated by change control process where an issue is
+opened which identify what is new/changed (jira). Sign-offs are recorded by
+development, testing, security, and product management. Production roll-outs
+happen on a regular basis without impact to service. This continuous process
+allows for security updates to roll out regularly and with urgency. If there is
+impact to production, a rollback is performed to restore service and whatever
+caused the problem is reverted from source. This restarts the re-proposal
+approval process of source changes. This process keeps the set of differences
+between the development environment and the production environment as low as
+possible.</p>
+<p>In the continuous delivery mindset, features are not released by the deployment
+of code into production, instead features are enabled in production at the
+appropriate time (dark launching). Feature toggle enablement in production is gated
+by a change control ticket (jira) that follows the software roll-out approval
+process. Feature toggle enablement in production can have a few more
+dependencies than code. Those dependencies include things like external
+documentation, early access programs, and internal playbooks for supporting the
+feature.</p>
+<h4 id="secure-development-standards">Secure Development Standards<a class="headerlink" href="#secure-development-standards" title="Permanent link">&para;</a></h4>
+<p><a href="https://en.wikipedia.org/wiki/Traceability">Traceability</a> of code changes allow
+for our software to be a living entity.  Our current system for documenting
+changes is jira. Every commit and/or Pull-Request, should have a jira supplied
+that describes contextually why this change is necessary and reasonable.  These
+artifacts over time allow for one to trace the lineage of why our production
+software and services change over time.</p>
+<p>All rovera <code>git</code> repositories have a company standard configuration from a
+ perspective.  This standard is a guideline and can be relaxed, but
+socialize when those exceptions are needed.  One example of an exception, is the
+<code>wiki</code> repository, as editing a wiki and always requiring a PR in this setting
+slows down &lsquo;flow&rsquo;.</p>
+<ul>
+<li>
+<p>Code: &lt;#&gt;</p>
+</li>
+<li>
+<p>Repo settings: &lt;#&gt;</p>
+</li>
+<li>
+<p>Build: &lt;#&gt;</p>
+</li>
+</ul>
+<p><strong>NOTE</strong>: The Sandbox project (and repos) do not follow this standard.  And
+certain projects might be excluded (e.g. <code>wiki</code>).</p>
+<p><strong>Developers follow the branch strategy and code review process below:</strong></p>
+<ol>
+<li>
+<p>All development uses feature branches based on the main branch used for the
+   current release. Any changes required for a new feature or defect fix are
+   committed to that feature branch.</p>
+<ul>
+<li>These changes must be covered under 1) a unit test where possible, or 2)
+  integration tests.</li>
+<li>Integration tests are <em>required</em> if unit tests cannot reliably exercise
+  all facets of the change.</li>
+</ul>
+</li>
+<li>
+<p>Developers are strongly encouraged to follow the <a href="https://github.com/blog/926-shiny-new-commit-styles">commit message conventions
+   suggested by GitHub</a>.</p>
+<ul>
+<li>Commit messages should be wrapped to 72 characters.</li>
+<li>Commit messages should be written in the present tense. This convention
+  matches up with commit messages generated by commands like git merge and
+  git revert.</li>
+<li>Additionally, the commit messages should start with the jira Issue ID when
+  applicable.</li>
+</ul>
+</li>
+<li>
+<p>Once the feature and corresponding tests are complete, a pull request (PR)
+   will be created using the  web interface. The pull request should
+   indicate which feature or defect is being addressed and should provide a
+   high-level description of the changes made.</p>
+</li>
+<li>
+<p>Code reviews are performed as part of the pull request procedure. Once a
+   change is ready for review, the author(s) will notify other engineers using
+   an appropriate mechanism, typically by adding reviewers as PR approvers.</p>
+<ul>
+<li>Other engineers will review the changes, using the guidelines above.</li>
+<li>Engineers should note all potential issues with the code; it is the
+  responsibility of the author(s) to address those issues or explain why
+  they are not applicable.</li>
+<li>If changes/commits are made to a PR, it should reset previous approvals
+  and require review and approvals again before the PR can be merged.</li>
+<li>Once the review process finishes, each reviewer should approve the PR, at
+  which point the original author(s) may merge their change into the main
+  branch (i.e. master).</li>
+<li>PR can only be merged with at least one approval from a reviewer other
+  than the author.</li>
+</ul>
+</li>
+<li>
+<p>If the feature or defect interacts with sensitive data, or controls access to
+   sensitive data, or contains security/risky infrastructure
+   changes to the target environment, the code changes must be reviewed by the
+   Security team before the feature is marked as complete.</p>
+<ul>
+<li>This review must include a security analysis for potential vulnerabilities
+  such as those listed in the <a href="https://www.owasp.org/index.php/Top10">OWASP Top
+  10</a>.</li>
+<li>This review must also verify that any actions performed by authenticated
+  users will generate appropriate audit log entries.</li>
+</ul>
+</li>
+</ol>
+<h4 id="release-strategy">Release Strategy<a class="headerlink" href="#release-strategy" title="Permanent link">&para;</a></h4>
+<p>Features, enhancements, and bugs are written up as issues (jira).  An engineer
+on a small team proposes changes necessary and creates a review for the team
+().  Continuous integration (bamboo hr) kicks off unit and functional
+tests which pass before changes are merged into the repository.  Once the review
+is complete, the changes are now deployed to the development environment where
+regression and end-to-end tests are run before the new code replaces the
+existing in-service code (test then deploy model). Small teams can decide to
+follow a source-control branching strategy that makes sense: git-flow, github
+flow.</p>
+<p>rovera practices continuous delivery of code into production through multiple
+environments: development, testing, production. The deploy process and
+infrastructure roll-out are written as code (Terraform) and managed under source
+control.</p>
+<p>rovera&rsquo;s multiple lower environments (dev, test) provide an ecosystem of
+sample data sets that can be used to exercise the application and services when
+test automation is run.  The test environment is where the system is stressed
+for performance and scalability.  Performance and scalability changes are driven
+by metric data captured through monitoring and logging (metrics before and after
+change - typically captured as part of the issue description/writeup).</p>
+<p>Deployments to production are gated by change management process where an issue
+is opened which identify what is new/changed (jira).  Sign-offs are recorded by
+development, testing, security, and product management.  Production roll-outs
+happen on a regular basis without impact to service.  This continuous process
+allows for security updates to roll out regularly and with urgency.  If there is
+impact to production, a rollback is performed to restore service and whatever
+caused the problem is reverted from source.  This restarts the re-proposal
+approval process of source changes.</p>
+<p>This process keeps set of differences between the development environment and
+the production environment as low as possible.</p>
+<p>Features may be released via code deployments or features may be enabled in
+production at an appropriate time (dark launching).  Feature toggle enablement in
+production is gated by the same change management ticket (jira) that follows the
+software roll-out approval process.  Feature toggle enablement in production can
+have a few more dependencies than code.  Those dependencies include things like
+external documentation, early access programs, and internal playbooks for
+supporting the feature.</p>
+<p><strong>Detailed process and procedures for code promotion and production release:</strong>
+See <a href="../ccm/">Configuration and Change Management</a>.</p>
+<h3 id="source-code-management">Source Code Management<a class="headerlink" href="#source-code-management" title="Permanent link">&para;</a></h3>
+<p>rovera development/engineering team uses  for
+source code management. Access to  and its configuration
+standards include:</p>
+<ul>
+<li>
+<p>All developers must authenticate to gain access to  and code
+  repos hosted on  according to standards and procedures
+  defined in the <a href="../access/">Access Policy</a>:</p>
+</li>
+<li>
+<p>Access control to the  web interface must be enabled, via
+    SSO and/or MFA if applicable</p>
+</li>
+<li>
+<p>SSH public/private key access may be used for command line or <code>git</code> access
+    to the code repos</p>
+</li>
+<li>
+<p>All code repos in  follow these configuration standards:</p>
+</li>
+<li>
+<p>All repos must have an owner identified and listed</p>
+</li>
+<li>
+<p>All repos are by default <code>private</code></p>
+</li>
+<li>
+<p>Certain branch restrictions are enabled, including:</p>
+</li>
+<li>
+<p>The <code>master</code> branch cannot be rebased</p>
+</li>
+<li>
+<p>Restrict direct commits into <code>master</code></p>
+</li>
+<li>
+<p>Restrict history rewrites of <code>master</code></p>
+</li>
+<li>
+<p>Restrict deletion of <code>master</code></p>
+</li>
+<li>
+<p>Certain pull request (PR) requirements are enforced before merging, including:</p>
+</li>
+<li>
+<p>Must have at least 1 review approval to merge</p>
+</li>
+<li>
+<p>Must have at least 1 successful build to merge</p>
+</li>
+<li>
+<p>all PR tasks must be completed</p>
+</li>
+</ul>
+<h3 id="high-level-application-security-requirements">High Level Application Security Requirements<a class="headerlink" href="#high-level-application-security-requirements" title="Permanent link">&para;</a></h3>
+<p>All rovera software must be developed to include the following general
+application security principles and requirements.  Web applications must also
+protect itself against the <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project#tab=OWASP_Top_10_for_2017_Release_Candidate">OWASP Top
+10</a>
+vulnerabilities.</p>
+<ol>
+<li>
+<p>Protect sensitive customer data such as PHI, 
+   PII and account passwords. Encrypt data stored (at rest).</p>
+</li>
+<li>
+<p>Secure data in transit and customer communications via TLS.</p>
+</li>
+<li>
+<p>Provision strong access control (authentication and authorization). Prevent
+   and report unauthorized access.</p>
+</li>
+<li>
+<p>Log all transactions and activities to be able to tell who did what, when,
+   where, and how. Mask or remove sensitive data in logs.</p>
+</li>
+<li>
+<p>Implement client security at application endpoints (e.g. browser, mobile
+   app).</p>
+</li>
+<li>
+<p>Communicate securely across application endpoints and between service
+  consumers/producers.</p>
+</li>
+<li>
+<p>Use secure defaults to ensure security when in all error conditions.</p>
+</li>
+<li>
+<p>Check and maintain the security of all third party and open source
+   libraries/components/dependencies.</p>
+</li>
+<li>
+<p>Validate all data inputs; encode data outputs when appropriate.</p>
+</li>
+<li>
+<p>Deploy and configure applications securely to production.</p>
+</li>
+<li>
+<p>Perform regular vulnerability analysis and apply security patches promptly.</p>
+</li>
+<li>
+<p>Secure privileged access to production environments and ensure ongoing
+    application monitoring.</p>
+</li>
+</ol>
+<p>All software code must complete a set of security scans/testing prior to being
+deployed to production, including open source dependency scanning, static and
+dynamic application security testing, as well as periodic penetration testing.</p>
+<p>Pre-production testing is performed with nonproduction data in nonproduction
+environments. Health checks are performed regularly or automated in production.</p>
+<p>Software vulnerability identified through any of the above processes shall be
+reported and tracked following rovera Vulnerability Management process
+as defined in the <a href="../vuln-mgmt/">Vulnerability Management Policy and Procedures</a>.</p>
+<h3 id="secure-design-and-application-threat-modeling">Secure Design and Application Threat Modeling<a class="headerlink" href="#secure-design-and-application-threat-modeling" title="Permanent link">&para;</a></h3>
+<p>rovera Security Team in collaboration with development team performs full
+Application Threat Modeling and Risk Assessment on per-application basis using a
+custom approach that relies on industry standards and best practices.</p>
+<p>Major application updates are captured via an <strong>RFC</strong> process.  The RFC
+template includes <strong>Security Consideration</strong> as a required section.  This 
+section is used to document abuse cases including: </p>
+<ul>
+<li>risks identified, </li>
+<li>attack vectors, and </li>
+<li>mitigating controls. </li>
+</ul>
+<p>Each RFC is required to capture sufficient details of the feature/component to
+be developed, including use cases, motivation and outcome, and the following
+design details as applicable:</p>
+<ul>
+<li>authentication/authorization mechanisms, </li>
+<li>network communications, </li>
+<li>data encryption,</li>
+<li>cloud services used,</li>
+<li>logging/auditing, </li>
+<li>data flow diagram/description,</li>
+<li>edge cases, drawbacks, and alternatives.</li>
+</ul>
+<p>The RFC must be approved prior to implementation.  Security team is included in
+RFC reviews via the pull request process.</p>
+<h4 id="platform-design-and-devops-security-details">Platform Design and DevOps Security Details<a class="headerlink" href="#platform-design-and-devops-security-details" title="Permanent link">&para;</a></h4>
+<p>Documentation on the rovera <a href="">Engineering Wiki</a>
+may include additional security specifications as well as the security design
+and implementation details of the rovera Platform and its
+supporting operations.</p>
+<h3 id="access-control-of-the-application-identification-authentication-authorization-accounting">Access Control of the Application (Identification, Authentication, Authorization, Accounting)<a class="headerlink" href="#access-control-of-the-application-identification-authentication-authorization-accounting" title="Permanent link">&para;</a></h3>
+<p>rovera external software application that is customer facing with
+access to customer specific data, including sensitive information such as PII
+and ePHI, implements strong access
+control, covering the Identification, Authentication, Authorization, and
+Accounting/Auditing (IAAA) of access and user activity.</p>
+<p>The implementation ensures that</p>
+<ul>
+<li>
+<p>the user requesting access is the one claimed (Identification and
+  Authentication);</p>
+</li>
+<li>
+<p>only users authorized to access specific data
+  (such as ePHI) are allowed to
+  (Authorization); and</p>
+</li>
+<li>
+<p>their access activities are logs (Accounting/Auditing) according to the
+  rovera auditing standards.</p>
+</li>
+</ul>
+<p>The current implementation leverages AWS Cognito for user identity management
+and access.  </p>
+<p>The backend platform implements granular Attribute-Based
+Access Control (ABAC) for granting access to specific services and data based on
+the attribute(s) of a principal (i.e. user requesting access &ndash; an attribute
+could be the role or group membership or organization the user belongs to) and
+the attribute(s) of the requested resource (i.e. data or service &ndash; an attribute
+could be the project this data belongs to).</p>
+<p>More implementation details are documented on the internal Engineering wiki.</p>
+<h3 id="free-and-open-source-software-foss-security">Free and Open Source Software (FOSS) Security<a class="headerlink" href="#free-and-open-source-software-foss-security" title="Permanent link">&para;</a></h3>
+<p>rovera security and development team implemented a process to</p>
+<ul>
+<li>Inventory all software dependencies;</li>
+<li>Scan software dependencies for known security vulnerability;</li>
+<li>Fix any and all high risk findings prior to production; and</li>
+<li>Review and identify licensing issues of the 3rd party software and
+     libraries.</li>
+</ul>
+<p>The current tool in use is Snyk. Snyk supports Node.js, Ruby,
+and Java. Documentation can be found at the Snyk website.</p>
+<p>Snyk also enables automatic license analysis for dependencies, and this
+functionality is embedded into the <code>securityScan()</code> bamboo hr pipeline step.</p>
+<p>Snyk can be leveraged in local development environment to scan locally
+and/or at every build for dev to include dev dependencies.</p>
+<h3 id="static-application-security-testing-sast">Static Application Security Testing (SAST)<a class="headerlink" href="#static-application-security-testing-sast" title="Permanent link">&para;</a></h3>
+<p>Tools:</p>
+<ul>
+<li>
+<p>The Lint and GitLeaks Platform - static and dynamic code analysis. Together with
+    the FOSS security tool, the SAST testing was made available to use via
+    the automated <code>security-scan</code> docker image, as well as integrated into 
+    rovera bamboo hr pipeline library via the <code>securityScan()</code> step</p>
+</li>
+<li>
+<p>Manual code security reviews are periodically performed by the Security team
+    as follows:</p>
+<ul>
+<li>
+<p>Periodic review as part of weekly activities</p>
+</li>
+<li>
+<p>Every pull request which includes security team as approvers</p>
+</li>
+<li>
+<p>By request - jira issue created on the Security project/board</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="dynamic-application-security-testing-dast">Dynamic Application Security Testing (DAST)<a class="headerlink" href="#dynamic-application-security-testing-dast" title="Permanent link">&para;</a></h3>
+<p>Dynamic testing is available by request to the Security team and is performed
+using OWASP ZAP. Security team is currently looking into automation of
+this type of scanning.</p>
+<p>Additionally, manual baseline dynamic testing is available by request to the
+Security team.</p>
+<h4 id="integration-of-dynamic-testing-into-automatic-tests">Integration of Dynamic testing into automatic tests<a class="headerlink" href="#integration-of-dynamic-testing-into-automatic-tests" title="Permanent link">&para;</a></h4>
+<p>Upon availability of automatic UI tests for applications being developed
+internally, an extension based on <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">OWASP
+ZAP</a> is used to
+transparently work with any UI tests available and automatically
+add basic dynamic tests into build pipeline.</p>
+<h3 id="penetration-testing">Penetration Testing<a class="headerlink" href="#penetration-testing" title="Permanent link">&para;</a></h3>
+<h4 id="external-penetration-testing">External Penetration Testing<a class="headerlink" href="#external-penetration-testing" title="Permanent link">&para;</a></h4>
+<p>An external penetration testing is performed at least once a year by a qualified
+security researcher / ethical hacker on the security team internally and/or with
+an external security consulting firm.</p>
+<h3 id="responsible-disclore-and-bug-bounty-program">Responsible Disclore and Bug Bounty Program<a class="headerlink" href="#responsible-disclore-and-bug-bounty-program" title="Permanent link">&para;</a></h3>
+<h4 id="public-vulnerability-disclosure-bug-bounty-program">Public Vulnerability Disclosure / Bug Bounty Program<a class="headerlink" href="#public-vulnerability-disclosure-bug-bounty-program" title="Permanent link">&para;</a></h4>
+<p>All technology contains bugs, including both functional defects and security
+vulnerability.</p>
+<p>rovera uses a third party platform to maintain a public
+vulnerability disclosure / bug bounty program.  This program takes advantage of
+crowd-sourced security researchers to perform penetration testing of
+rovera&rsquo;s platform and its public facing resources.</p>
+<p>The current program provider is HackerOne.</p>
+<h3 id="outsourced-software-development">Outsourced Software Development<a class="headerlink" href="#outsourced-software-development" title="Permanent link">&para;</a></h3>
+<p>rovera requires all outsourced software development to follow the
+same rigor and process as internal engineering. Outsourced developers must
+develop in our secure environment, accept and follow our security policies and
+procedures, and comply with the same secure coding standards, including:</p>
+<ul>
+<li>
+<p>Receive regular OWASP or equivalent secure coding training.</p>
+</li>
+<li>
+<p>Follow the same source control, code review, and security code scanning
+  procedures as defined.</p>
+</li>
+<li>
+<p>Install endpoint compliance agent that checks to make sure firewall,
+  encryption, patching, password policy, screensaver password, and other
+  required protection is properly configured.</p>
+</li>
+</ul>
+<p>Additionally, the third party firm providing outsourced development services
+must demonstrate that they have conducted the appropriate screening during
+hiring.</p>
+<h3 id="hipaa-best-practices-for-software-development">HIPAA Best Practices for Software Development<a class="headerlink" href="#hipaa-best-practices-for-software-development" title="Permanent link">&para;</a></h3>
+<h4 id="use-only-hipaa-eligible-services-in-the-cloud-aws">Use only HIPAA eligible services in the Cloud (AWS)<a class="headerlink" href="#use-only-hipaa-eligible-services-in-the-cloud-aws" title="Permanent link">&para;</a></h4>
+<p>Because we use the services provided by AWS for our production environment with
+contains electronic protected health information (ePHI), AWS is a &ldquo;business
+associate&rdquo; of ours.  It is required by HIPAA for rovera and AWS to
+enter into a <a href="https://aws.amazon.com/blogs/security/tag/aws-business-associate-agreement/">&ldquo;business associate agreement&rdquo; (BAA)</a>.</p>
+<p>Our fully executed BAA with AWS can be found on the internal document repository.</p>
+<p>We must only used HIPAA-eligible services covered under the BAA to
+process and store ePHI.  Non-eligible services may be used in support
+of our cloud infrastructure as long as it does not have access to
+ePHI.</p>
+<p>A list of HIPAA eligible services can be found <a href="https://aws.amazon.com/compliance/hipaa-eligible-services-reference/">here</a>.
+AWS regularly updates its services to meet HIPAA compliance
+requirements.  Check the page once in a while to find out if new
+services have been added.</p>
+<p>Additional References:</p>
+<ul>
+<li><a href="https://aws.amazon.com/health/healthcare-compliance/hipaa/">Architecting for HIPAA in the Cloud</a></li>
+<li><a href="https://aws.amazon.com/compliance/shared-responsibility-model/">AWS Shared Responsibility Model</a></li>
+<li><a href="https://aws.amazon.com/compliance/hipaa-compliance/">AWS HIPAA Compliance</a></li>
+<li><a href="https://d0.awsstatic.com/whitepapers/compliance/AWS_HIPAA_Compliance_Whitepaper.pdf">AWS HIPAA Compliance Whitepaper</a></li>
+</ul>
+<h4 id="separate-access-and-data-between-prod-and-non-prod-accounts">Separate access and data between prod and non-prod accounts<a class="headerlink" href="#separate-access-and-data-between-prod-and-non-prod-accounts" title="Permanent link">&para;</a></h4>
+<p>It is a compliance requirement of multiple regulations to ensure
+separation of duties between production and non-production
+environments, including both access and data.  Additionally, we should
+not use production data for dev or test, unless the data has been
+properly sanitized/masked.</p>
+<p>Examples of regulations and certifications that have this explicit
+requirement include HIPAA, SAS70/SSAE-17, SOC, PCI, and ISO
+27001/27002, many of which are on our target list to be compliant with
+or certified to.  </p>
+<h4 id="do-not-log-ephi">Do not log ePHI<a class="headerlink" href="#do-not-log-ephi" title="Permanent link">&para;</a></h4>
+<p>Not only it is a security best practice to avoid sensitive data such
+as ePHI in application logging, it may be a contract violation (per
+AWS BAA) to do so.  We must not send any ePHI to non HIPAA eligible
+services in AWS, such as CloudTrail.</p>
+<h4 id="include-the-right-language-in-notices">Include the right language in notices<a class="headerlink" href="#include-the-right-language-in-notices" title="Permanent link">&para;</a></h4>
+<p>Specific language must be included in terms, consents, and notices.
+For example, we must collect email addresses from patients when they
+sign up for the PHC, and specify in the terms that we may use the
+email address provided as a formal method of communication, including
+breach notification, should a breach occurs that impact their PHI.</p>
+<h4 id="data-protection">Data protection<a class="headerlink" href="#data-protection" title="Permanent link">&para;</a></h4>
+<p>Follow the requirements listed in the following documents:</p>
+<ul>
+<li><a href="../data-mgmt/#data-classification-model">Data Classification Model</a>;</li>
+<li><a href="../data-mgmt/#data-handling-requirements-matrix">Data Handling Requirements</a>;</li>
+<li><a href="../data-protection/">Data Protection Policy and Procedures</a>; and</li>
+<li><a href="../data-mgmt/#backup-and-recovery">Backup and Recovery Process</a>.</li>
+</ul>
+<h4 id="risk-analysis-and-compliance-assessment">Risk Analysis and Compliance Assessment<a class="headerlink" href="#risk-analysis-and-compliance-assessment" title="Permanent link">&para;</a></h4>
+<p>Read the <a href="assessments/hipaa-latest.md">latest assessment report</a> for more
+details on rovera&rsquo;s HIPAA compliance.</p>
+<h3 id="production-system-monitoring-and-paging">Production System Monitoring and Paging<a class="headerlink" href="#production-system-monitoring-and-paging" title="Permanent link">&para;</a></h3>
+<p>Software and systems deployed in production are monitored 24/7 for health check
+and other major/critical error conditions. The on call team is paged via
+PagerDuty in the event an error or failure is detected.</p>
+<p>Notifications via additional channels such as Slack and email are also
+configured.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1807 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="rovera Security Policies, Standards, and Procedures">
+      
+      
+      
+        <link rel="canonical" href="http://www.bbc.com/security/system-audit/">
+      
+      
+        <link rel="prev" href="../compliance-audit/">
+      
+      
+        <link rel="next" href="../hr/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>7. System Audits, Monitoring and Assessments - rovera Security PSP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#system-audits-monitoring-and-assessments" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="rovera Security PSP" class="md-header__button md-logo" aria-label="rovera Security PSP" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            rovera Security PSP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              7. System Audits, Monitoring and Assessments
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="rovera Security PSP" class="md-nav__button md-logo" aria-label="rovera Security PSP" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    rovera Security PSP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Security Program Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../corp-gov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Corporate Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Policy Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Security Architecture and Operating Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Roles, Responsibilities and Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Risk Management and Risk Assessment Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Compliance Audits and External Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    7. System Audits, Monitoring and Assessments
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    7. System Audits, Monitoring and Assessments
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls and Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-system-audits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of System Audits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-events-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Events Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internalmanual-auditing-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal/Manual Auditing Activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-and-reporting-of-audit-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review and Reporting of Audit Findings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remediation-of-control-deficiencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remediation of Control Deficiencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-trails-and-application-security-events-logging-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Trails and Application Security Events Logging Standard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-trail-integrity-security-controls-and-log-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Trail Integrity - Security Controls and Log Retention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditing-customer-and-partner-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditing Customer and Partner Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditing-and-assessment-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditing and Assessment Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-education-awareness-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training, Education, Awareness and Responsibilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. HR and Personnel Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Facility Access and Physical Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Asset Inventory Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Data Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-protection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Data Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Secure Software Development and Product Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Configuration and Change Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Threat Detection and Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuln-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Vulnerability Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mdm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Mobile Device Security and Media Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcdr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Business Continuity and Disaster Recovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Incident Response
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../breach/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Breach Investigation and Notification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vendor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Third Party Security and Vendor Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Privacy Practice and Consent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Addendum and References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_27" id="__nav_27_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_27">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../employee-handbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A. Employee Handbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B. Approved Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-vendors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C. Approved Vendors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    D. Key Definitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-baa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E. HIPAA Business Associate Agreement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    F. HIPAA Controls Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    G. NIST Controls Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    H. Privacy Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookie-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I. Cookie Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr-dpa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    J. GDPR Data Processing Agreement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls and Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-system-audits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of System Audits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-events-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Events Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internalmanual-auditing-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal/Manual Auditing Activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-and-reporting-of-audit-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review and Reporting of Audit Findings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remediation-of-control-deficiencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remediation of Control Deficiencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-trails-and-application-security-events-logging-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Trails and Application Security Events Logging Standard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-trail-integrity-security-controls-and-log-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Trail Integrity - Security Controls and Log Retention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditing-customer-and-partner-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditing Customer and Partner Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditing-and-assessment-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditing and Assessment Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-education-awareness-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training, Education, Awareness and Responsibilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="system-audits-monitoring-and-assessments">System Audits, Monitoring and Assessments<a class="headerlink" href="#system-audits-monitoring-and-assessments" title="Permanent link">&para;</a></h1>
+<p><code>2024.1</code></p>
+<p>rovera shall audit, monitor, and assess the access and activity of
+systems and applications that process or store production and/or sensitive data
+such as personally identifiable information (PII)
+and electronic protected health information (ePHI)
+in order to ensure compliance.</p>
+<p>It is required by the HIPAA Security Rule, that healthcare organizations to
+implement reasonable hardware, software, and/or procedural mechanisms that
+record and examine activity in information systems that contain or use ePHI.</p>
+<p>Audit activities may be limited by application, system, and/or network auditing
+capabilities and resources. rovera shall make reasonable and
+good-faith efforts to safeguard information privacy and security through a
+well-thought-out approach to auditing that is consistent with available
+resources.</p>
+<p>It is the policy of rovera to safeguard the confidentiality, integrity, and
+availability of applications, systems, and networks. To ensure that appropriate
+safeguards are in place and effective, rovera shall audit access and activity
+to detect, report, and guard against:</p>
+<ul>
+<li>Network vulnerabilities and intrusions;</li>
+<li>Breaches in confidentiality and security of sensitive information;</li>
+<li>Performance problems and flaws in applications;</li>
+<li>Improper alteration or destruction of sensitive information;</li>
+<li>Out of date software and/or software known to have vulnerabilities.</li>
+</ul>
+<p>This policy applies to all rovera systems that store, transmit, or process
+sensitive information.</p>
+<h2 id="policy-statements">Policy Statements<a class="headerlink" href="#policy-statements" title="Permanent link">&para;</a></h2>
+<p>rovera policy requires that:</p>
+<p>(a) All critical computing systems and software, both virtual and physical, must
+enable audit logging.</p>
+<p>(b) Audit logs must include sufficient information to identify who did what,
+when, where.</p>
+<p>(c) An annual audit of rovera security controls must be conducted, either by a
+designated internal audit team or a qualified external audit firm.</p>
+<h2 id="controls-and-procedures">Controls and Procedures<a class="headerlink" href="#controls-and-procedures" title="Permanent link">&para;</a></h2>
+<h3 id="types-of-system-audits">Types of System Audits<a class="headerlink" href="#types-of-system-audits" title="Permanent link">&para;</a></h3>
+<p>rovera&rsquo;s auditing processes include the following.</p>
+<ol>
+<li>
+<p><strong>Configuration and Activity Monitoring:</strong> This refers to the logging,
+   monitoring, scanning and alerting of a system, account, or environment, which
+   may be achieved using real-time automated scripts/software or a manual
+   review/testing. This type of auditing is performed <em>continuously</em> as part of
+   rovera operations.</p>
+<div class="admonition tip">
+<p class="admonition-title">Examples include:</p>
+<ul>
+<li>User: User and account-level audit trails generally monitor and log all commands directly initiated by the user, all identification and authentication attempts, and data and services accessed.</li>
+<li>Application: Application-level audit trails generally monitor and log all user activities, including data accessed and modified and specific actions.</li>
+<li>System: System-level audit trails generally monitor and log user activities, applications accessed, file integrity, and other system-defined specific actions.</li>
+<li>Network: Network-level scans or audit trails generally monitor information on what is operating, perform penetrations, and identify vulnerabilities.</li>
+<li>Traffic: Traffic refers to the incoming and outgoing traffic into and out of production/restricted environments. For example, firewall logs or VPC flow logs in AWS.</li>
+<li>Data: Data includes all successful and failed attempts at production data access and editing.</li>
+</ul>
+<p><em>Data associated with above events will include origin, destination, action performed, timestamp, and other relevant details available.</em></p>
+</div>
+</li>
+<li>
+<p><strong>Access Review:</strong> This refers to the review of all user and service accounts
+   and permissions across rovera operational environments, including
+   on-premise systems, cloud environments such as AWS accounts, and other
+   applications such as collaboration software, ticketing system and code repos.</p>
+<ul>
+<li>rovera developed an internal tool to automatically pull configurations
+  from our cloud based environments, including<ul>
+<li>AWS access configuration from IAM policies, EC2 VPC and security group
+  settings, S3 bucket policies, Lambda and API Gateway resources, etc.;</li>
+<li>Users, groups, application access from Okta IdP;</li>
+<li>Network access settings from Cisco Meraki, etc.</li>
+</ul>
+</li>
+<li>The data is collected either on demand triggered by security team or by
+  changes in the operational environment.</li>
+<li>The data is used by the tool to aggregate and analyze user and application
+  access.</li>
+<li>Access to other systems and applications that are not covered by this
+  automated tool are reviewed manually on a quarterly
+  basis or with any significant change to the target environment.</li>
+<li>As a result of each review, unused or invalid access will be removed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Compliance and Controls Audit:</strong> This refers to the audit performed against
+   the Technical, Administrative, and/or Physical controls as defined in
+   rovera policies and procedures, to measure their adoption and
+   effectiveness.  This type of auditing is typically performed by either a
+   designated internal audit team or an external audit firm, at <em>defined
+   intervals</em> or prompted by a <em>trigger event</em>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Potential trigger events include:</p>
+<ul>
+<li>Scheduled compliance audit/assessment (e.g. annual risk assessment)</li>
+<li>High risk or problem prone incidents or events, or as part of post-incident activities</li>
+<li>Business associate, customer, or partner complaints</li>
+<li>Identification of significant security vulnerabilities</li>
+<li>Atypical patterns of activity</li>
+<li>Failed authentication attempts</li>
+<li>Remote access use and activity</li>
+<li>Activity post termination</li>
+<li>Random audits</li>
+</ul>
+</div>
+</li>
+</ol>
+<h3 id="security-events-analysis">Security Events Analysis<a class="headerlink" href="#security-events-analysis" title="Permanent link">&para;</a></h3>
+<p>Security logs, events, and audit trails are reviewed by the security team with
+the assistance of automated systems and processes.</p>
+<ul>
+<li>Auditing logs are automatically analyzed and correlated by the monitoring
+  solutions and/or a centralized security information and event management
+  system.</li>
+<li>The systems are configured with rules/policies to identify suspicious
+  activities, vulnerabilities and misconfigurations.  </li>
+<li>Alerts are triggered upon identification of an issue based on the policy
+  configuration.  </li>
+<li>The alerts are sent immediately to the responsible staff (e.g. security team)
+  for analysis. The alerts may be sent via email, Slack messaging, or as
+  notification on the monitoring dashboard.</li>
+<li>Analysis is prioritized based on alert severity.  High severity alerts are
+  typically reviewed within 24 hours.</li>
+<li>Incident response process is followed, as needed.</li>
+<li>Patches and updates will be applied to all systems in a timely manner.</li>
+</ul>
+<h3 id="internalmanual-auditing-activities">Internal/Manual Auditing Activities<a class="headerlink" href="#internalmanual-auditing-activities" title="Permanent link">&para;</a></h3>
+<p>Additional manual reviews, such as user accounts and access auditing, may be
+necessary from time to time. These activities may be triggered by the events
+listed above.</p>
+<ul>
+<li>
+<p>Responsibility for audit activity is assigned to rovera&rsquo;s Security Officer.
+  The Security Officer shall:</p>
+<ul>
+<li>Assign the task of generating reports for audit activities to the
+  workforce member responsible for the application, system, or network;</li>
+<li>Assign the task of reviewing the audit reports to the workforce member
+  responsible for the application, system, or network, the Privacy Officer,
+  or any other individual determined to be appropriate for the task;</li>
+<li>Organize and provide oversight to a team structure charged with audit
+  compliance activities (e.g., parameters, frequency, sample sizes, report
+  formats, evaluation, follow-up, etc.).</li>
+<li>All connections to rovera are monitored. Access is limited to certain
+  services, ports, and destinations. Exceptions to these rules, if created,
+  are reviewed on an annual basis.</li>
+</ul>
+</li>
+<li>
+<p>The manual review process shall define and include:</p>
+<ul>
+<li>Description of the activity as well as rationale for performing the audit.</li>
+<li>Identification of personnel to perform the review (workforce members shall
+  not review audit logs that pertain to their own system activity).</li>
+<li>Frequency of the auditing process.</li>
+<li>Determination of significant events requiring further review and
+  follow-up.</li>
+<li>Identification of appropriate reporting channels for audit results and
+  required follow-up.</li>
+</ul>
+</li>
+<li>
+<p>Manual audits and reviews activities are tracked in jira.</p>
+</li>
+<li>
+<p>Auditing, reviews and testing may be carried out internally or provided
+  through an external third-party vendor. Whenever possible, a third party
+  auditing vendor should not be providing the organization IT oversight services
+  (e.g., vendors providing IT services should not be auditing their own services
+  to ensure separation of duties).</p>
+</li>
+</ul>
+<h3 id="audit-requests">Audit Requests<a class="headerlink" href="#audit-requests" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>A request may be made for an audit for a specific cause. The request may come
+   from a variety of sources including, but not limited to, Privacy Officer,
+   Security Officer, Customer, Partner, or an Application owner or application
+   user.</p>
+</li>
+<li>
+<p>A request for an audit for specific cause must include time frame, frequency,
+   and nature of the request.</p>
+</li>
+<li>
+<p>A request for an audit must be reviewed and approved by rovera&rsquo;s Privacy
+   Officer and/or Security Officer before proceeding. Under no circumstances
+   shall detailed audit information be shared with parties without proper
+   permissions and access to see such data.</p>
+<ul>
+<li>Should the audit disclose that a workforce member has accessed sensitive data
+  inappropriately, the minimum necessary/least privileged information shall
+  be shared with rovera&rsquo;s Security Officer to determine appropriate
+  sanction/corrective disciplinary action.</li>
+<li>Only de-identified information shall be shared with Customer or Partner
+  regarding the results of the investigative audit process. This information
+  will be communicated to the appropriate personnel by rovera&rsquo;s Privacy
+  Officer or designee. Prior to communicating with customers and partners
+  regarding an audit, it is recommended that rovera consider seeking
+  guidance from risk management and/or legal counsel.</li>
+</ul>
+</li>
+</ol>
+<h3 id="review-and-reporting-of-audit-findings">Review and Reporting of Audit Findings<a class="headerlink" href="#review-and-reporting-of-audit-findings" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Audit information that is routinely gathered must be reviewed in a timely
+   manner, at least monthly, by the responsible workforce member(s).
+   Additional reviews are performed as needed to assure the proper data is being
+   captured and retained.</p>
+</li>
+<li>
+<p>The reporting process shall allow for meaningful communication of the audit
+   findings to relevant workforce members, Customers, or Partners.</p>
+<ul>
+<li>Significant findings shall be reported immediately in a written format.
+  rovera&rsquo;s security incident response form may be utilized to report a
+  single event.</li>
+<li>Routine findings shall be reported to the sponsoring leadership structure
+  in a written report format.</li>
+</ul>
+</li>
+<li>
+<p>Reports of audit results shall be limited to internal use on a minimum
+   necessary/need-to-know basis. Audit results shall not be disclosed externally
+   without administrative and/or legal counsel approval.</p>
+</li>
+<li>
+<p>Security audits constitute an internal, confidential monitoring practice that
+   may be included in rovera&rsquo;s performance improvement activities and
+   reporting. Care shall be taken to ensure that the results of the audits are
+   disclosed to administrative-level oversight structures only and that
+   information which may further expose organizational risk is shared with
+   extreme caution. Generic security audit information may be included in
+   organizational reports (individually-identifiable information shall not be
+   included in the reports).</p>
+</li>
+<li>
+<p>Whenever indicated through evaluation and reporting, appropriate corrective
+   actions must be undertaken. These actions shall be documented and shared with
+   the responsible workforce members, Customers, and/or Partners.</p>
+</li>
+</ol>
+<h3 id="remediation-of-control-deficiencies">Remediation of Control Deficiencies<a class="headerlink" href="#remediation-of-control-deficiencies" title="Permanent link">&para;</a></h3>
+<p>Most controls are continuously monitored and reported via automation on the
+JupiterOne platform.</p>
+<p>Control deficiencies identified as a result of an internal or external system
+audit are documented and reviewed with management.</p>
+<p>Security team works with the corresponding control owner to prioritize and
+mitigate the control deficiency, including applying corrective actions,
+implementating additional controls or adjusting existing controls as needed.</p>
+<h3 id="audit-trails-and-application-security-events-logging-standard">Audit Trails and Application Security Events Logging Standard<a class="headerlink" href="#audit-trails-and-application-security-events-logging-standard" title="Permanent link">&para;</a></h3>
+<p>rovera logging standards requires application and system logs to contain
+sufficient information to determine <strong>who did what, when, where</strong> to ensure
+recording of security and audit events and to generate evidence for unauthorized
+activities.</p>
+<p>All systems and software developed at rovera must have the following security
+events logging enabled as part of or in addition to standard application
+logging.</p>
+<ol>
+<li>
+<p>All security log events must have the following attributes at minimum:</p>
+<ul>
+<li>Timestamp of the event (synchronized to approved time server)</li>
+<li>Identifier of the principal performing the action (such as user ID)</li>
+<li>Location including both origin (such as hostname/IP) and target (such as
+  host/service/resource)</li>
+<li>Activity or action (such as log in, log out, create, read, update, delete
+  of a resource)</li>
+<li>the action may be logged as and determined by the HTTP request method
+     and the API endpoint </li>
+<li>Event description and additional details may be logged depending on the
+  system or application </li>
+</ul>
+</li>
+<li>
+<p>The following types of security events must be logged at minimum:</p>
+<ul>
+<li>User and group administration activities (user or group added, updated,
+  deleted, access granted/revoked)</li>
+<li>All login attempts, successful and unsuccessful including the source IP
+  address</li>
+<li>All interactive logoffs</li>
+<li>Privileged actions (configuration changes, application shutdown/restart,
+  software update etc)</li>
+<li>Major application events (e.g. application failure, start and restart,
+  shutdown)</li>
+<li>Any and all actions performed on critical resources such as production
+  data</li>
+</ul>
+</li>
+<li>
+<p>All application and system logs must not include (removed or masked):</p>
+<ul>
+<li>
+<p>Any sensitive information, including
+  protected health information (PHI),
+  personally identifiable information (PII)</p>
+</li>
+<li>
+<p>except for IP addresses</p>
+</li>
+<li>usernames/logins may/should be logged as part of authentication logging</li>
+<li>
+<p>for user action auditing, opaque IDs should be used instead of
+    usernames/logins whenever possible</p>
+</li>
+<li>
+<p>Authentication and session tokens, user credentials</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Security events and audit logs must be:</p>
+<ul>
+<li>Always accessible to the monitoring system/team</li>
+<li>Protected from any changes</li>
+<li>Monitored with alerting mechanism in place (including alert for not
+  receiving log events for a certain period of time)</li>
+</ul>
+</li>
+<li>
+<p>All rovera IT infrastructure must have system clock synchronized</p>
+</li>
+</ol>
+<p><em>Examples of recommended application events for logging and their auditing purpose:</em></p>
+<table>
+<thead>
+<tr>
+<th>Events</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client requests and server responses</td>
+<td>forensics and debugging - details level is defined by application</td>
+</tr>
+<tr>
+<td>Successful and unsuccessful login attempts</td>
+<td>authentication</td>
+</tr>
+<tr>
+<td>Successful and failed access to application resources</td>
+<td>authorization, escalation of privileges</td>
+</tr>
+<tr>
+<td>Excessive amount of requests from the client</td>
+<td>brute-forcing, malicious bots, denial of service attacks</td>
+</tr>
+<tr>
+<td>E-mails sent by an application</td>
+<td>spamming, social engineering</td>
+</tr>
+</tbody>
+</table>
+<p><em>Details of the logging configuration is documented at</em></p>
+<ul>
+<li><a href="">Application Logging - documented on the Engineering Wiki</a></li>
+<li><a href="https://developer.okta.com/docs/api/resources/system_log">Identity and Access Activity Logs via Okta</a></li>
+<li><a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-examples.html">AWS Cloudtrail</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html">AWS S3 Server Access Logs</a></li>
+</ul>
+<h3 id="audit-trail-integrity-security-controls-and-log-retention">Audit Trail Integrity - Security Controls and Log Retention<a class="headerlink" href="#audit-trail-integrity-security-controls-and-log-retention" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Audit logs shall be protected from unauthorized access or modification, so
+   the information they contain will be made available only if needed to
+   evaluate a security incident or for routine audit activities as outlined in
+   this policy.</li>
+<li>All audit logs are protected in transit and encrypted at rest to control
+   access to the content of the logs.</li>
+<li>
+<p>Whenever possible, audit logs shall be stored on a separate system to
+   minimize the impact auditing may have on the privacy system and to prevent
+   access to audit trails by those with system administrator privileges.</p>
+<ul>
+<li>Separate systems are used to apply the security principle of &ldquo;separation
+  of duties&rdquo; to protect audit trails from hackers.</li>
+<li>rovera logging servers may include Elasticsearch, Logstash, and Kibana
+  (ELK) as part of their baseline configuration to ease reviewing of audit
+  log data. The ELK toolkit provides message summarization, reduction, and
+  reporting functionality.</li>
+</ul>
+</li>
+<li>
+<p>Reports summarizing audit activities shall be retained for a period of seven
+   years.</p>
+</li>
+<li>Audit log data is retained locally on the audit log server or in the source
+   environment for a period of one month. Beyond that, log data is encrypted and
+   moved to warm storage (currently S3) using automated scripts, and is retained
+   for a minimum of one year.</li>
+<li>Raw event data may be purged after one month / 30 days as long as the
+   required details are sufficiently covered in aggregated audit logs/reports.</li>
+</ol>
+<h3 id="auditing-customer-and-partner-activity">Auditing Customer and Partner Activity<a class="headerlink" href="#auditing-customer-and-partner-activity" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Periodic monitoring of Customer and Partner activity shall be carried out to
+   ensure that access and activity is appropriate for privileges granted and
+   necessary to the arrangement between rovera and the 3rd party.
+   rovera will make every effort to assure Customers and Partners
+   do not gain access to data outside of their own environments.</p>
+</li>
+<li>
+<p>If it is determined that the Customer or Partner has exceeded the scope of
+   access privileges, rovera&rsquo;s management and security must remedy
+   the problem immediately.</p>
+</li>
+<li>
+<p>If it is determined that a Customer or Partner has violated the terms of the
+   HIPAA business associate agreement or any terms within the HIPAA regulations,
+   rovera must take immediate action to remediate the situation. Continued
+   violations may result in discontinuation of the business relationship.</p>
+</li>
+</ol>
+<h3 id="auditing-and-assessment-tools">Auditing and Assessment Tools<a class="headerlink" href="#auditing-and-assessment-tools" title="Permanent link">&para;</a></h3>
+<p>rovera&rsquo;s Security Officer is authorized to select and use assessment tools
+that are designed to detect vulnerabilities and intrusions. Use of such tools
+against rovera systems and environments are prohibited by others, including
+Customers and Partners, without the explicit authorization of the Security
+Officer. These tools may include, but are not limited to:</p>
+<ul>
+<li>Scanning tools and devices;</li>
+<li>Password cracking utilities;</li>
+<li>Network &ldquo;sniffers&rdquo;;</li>
+<li>Security agents installed locally on servers and endpoints;</li>
+<li>Passive and active intrusion detection systems; and</li>
+<li>Penetration testing tools.</li>
+</ul>
+<p>Vulnerability testing software may be used to probe the network to identify what
+is running (e.g., operating system or product versions in place), whether
+publicly-known vulnerabilities have been corrected, and evaluate whether the
+system can withstand attacks aimed at circumventing security controls.</p>
+<h3 id="training-education-awareness-and-responsibilities">Training, Education, Awareness and Responsibilities<a class="headerlink" href="#training-education-awareness-and-responsibilities" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>rovera workforce members are provided training, education, and
+   awareness on safeguarding the privacy and security of business and data.
+   rovera&rsquo;s commitment to auditing access and activity of the
+   information applications, systems, and networks is communicated through new
+   employee orientation, ongoing training opportunities and events, and
+   applicable policies. rovera workforce members are made aware of
+   responsibilities with regard to privacy and security of information as well
+   as applicable sanctions/corrective disciplinary actions should the auditing
+   process detect a workforce member&rsquo;s failure to comply with organizational
+   policies.</p>
+</li>
+<li>
+<p>rovera Customers are provided with necessary information to understand
+   rovera auditing capabilities. Platform Customers are responsible for the
+   logging, auditing and retention of any application hosted outside of rovera
+   environments, even though the applications may integrate with rovera
+   Platform API.  Customer applications hosted within the rovera environments
+   will follow the auditing standards and procedures defined in this document.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

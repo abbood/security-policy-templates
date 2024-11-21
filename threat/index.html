@@ -1,0 +1,1439 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="rovera Security Policies, Standards, and Procedures">
+      
+      
+      
+        <link rel="canonical" href="http://www.bbc.com/security/threat/">
+      
+      
+        <link rel="prev" href="../ccm/">
+      
+      
+        <link rel="next" href="../vuln-mgmt/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>16. Threat Detection and Prevention - rovera Security PSP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#threat-detection-and-prevention" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="rovera Security PSP" class="md-header__button md-logo" aria-label="rovera Security PSP" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            rovera Security PSP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              16. Threat Detection and Prevention
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="rovera Security PSP" class="md-nav__button md-logo" aria-label="rovera Security PSP" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    rovera Security PSP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Security Program Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../corp-gov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Corporate Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Policy Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Security Architecture and Operating Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Roles, Responsibilities and Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risk-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Risk Management and Risk Assessment Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Compliance Audits and External Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. System Audits, Monitoring and Assessments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. HR and Personnel Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Facility Access and Physical Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Asset Inventory Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Data Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-protection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Data Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Secure Software Development and Product Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Configuration and Change Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    16. Threat Detection and Prevention
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    16. Threat Detection and Prevention
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls and Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-malware-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Malware Protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-intrusion-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Intrusion Detection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Intrusion Detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intrusion-detection-for-on-premise-internal-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intrusion Detection for On-Premise Internal Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intrusion-detection-in-aws-cloud-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intrusion Detection in AWS Cloud Environments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-intrusion-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host Intrusion Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-application-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Application Protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centralized-security-information-and-event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Centralized Security Information and Event Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threat-intelligence-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threat Intelligence Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuln-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Vulnerability Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mdm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Mobile Device Security and Media Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcdr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Business Continuity and Disaster Recovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Incident Response
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../breach/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Breach Investigation and Notification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vendor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Third Party Security and Vendor Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Privacy Practice and Consent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Addendum and References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_27" id="__nav_27_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_27">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../employee-handbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A. Employee Handbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B. Approved Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-vendors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C. Approved Vendors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    D. Key Definitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-baa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E. HIPAA Business Associate Agreement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    F. HIPAA Controls Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    G. NIST Controls Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    H. Privacy Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookie-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I. Cookie Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr-dpa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    J. GDPR Data Processing Agreement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls and Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-malware-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Malware Protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-intrusion-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Intrusion Detection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Intrusion Detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intrusion-detection-for-on-premise-internal-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intrusion Detection for On-Premise Internal Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intrusion-detection-in-aws-cloud-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intrusion Detection in AWS Cloud Environments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-intrusion-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host Intrusion Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-application-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Application Protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centralized-security-information-and-event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Centralized Security Information and Event Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threat-intelligence-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threat Intelligence Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="threat-detection-and-prevention">Threat Detection and Prevention<a class="headerlink" href="#threat-detection-and-prevention" title="Permanent link">&para;</a></h1>
+<p><code>2024.1</code></p>
+<p>In order to preserve the integrity of data that rovera stores, processes, or
+transmits for Customers, rovera implements strong intrusion detection tools
+and policies to proactively track and retroactively investigate unauthorized
+access. This include threat detection and prevention at both the network and
+host level, as well as threat intelligence monitoring.</p>
+<h2 id="policy-statements">Policy Statements<a class="headerlink" href="#policy-statements" title="Permanent link">&para;</a></h2>
+<p>rovera policy requires that:</p>
+<p>(a) All critical systems, assets and environments must implement realtime threat
+detection or prevention.</p>
+<h2 id="controls-and-procedures">Controls and Procedures<a class="headerlink" href="#controls-and-procedures" title="Permanent link">&para;</a></h2>
+<h3 id="system-malware-protection">System Malware Protection<a class="headerlink" href="#system-malware-protection" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>All end-user workstations and production systems must have antivirus running.
+   The default anti-malware solution used is Carbon Black PSC. The anti-malware solution
+   will include protection against malicious mobile code.</p>
+<ul>
+<li>Next generation endpoint protection agent may be used as an equivalent solution.</li>
+<li>Hosts are scanned continuously for malicious binaries in critical system
+  paths. Additionally, if supported, the agent is set to to scan system
+  every 2 hours and at reboot to assure no malware is present.</li>
+<li>The malware signature database is kept up to date, changes are pushed
+  continuously.</li>
+<li>Logs of virus scans and alerts are maintained according to the
+  requirements outlined in <a href="../system-audit/">System Auditing</a>.</li>
+</ul>
+</li>
+<li>
+<p>Detected malware is evaluated and removed following the established <a href="../ir/">incident
+   response process</a>.</p>
+</li>
+<li>
+<p>All systems are to only be used for rovera business needs.</p>
+</li>
+</ol>
+<h3 id="firewall-protection">Firewall Protection<a class="headerlink" href="#firewall-protection" title="Permanent link">&para;</a></h3>
+<p>Firewall protection is implemented at the following layers</p>
+<ul>
+<li>
+<p><strong>Network</strong> - including Network ACL and Security Groups in AWS as well as on-
+  premise firewalls between the office networks and the Internet.</p>
+</li>
+<li>
+<p><strong>Host</strong> - local firewalls are enabled on the user endpoints as well as
+  servers (compute and database instances in AWS are protected by security
+  groups)</p>
+</li>
+<li>
+<p><strong>Application</strong> - web application firewall (WAF) and content distribution are
+  configured at the application layer to protect against common web application
+  attacks such as cross site scripting, injection and denial-of-service attacks.</p>
+</li>
+</ul>
+<h3 id="network-intrusion-detection">Network Intrusion Detection<a class="headerlink" href="#network-intrusion-detection" title="Permanent link">&para;</a></h3>
+<h4 id="intrusion-detection-for-on-premise-internal-networks">Intrusion Detection for On-Premise Internal Networks<a class="headerlink" href="#intrusion-detection-for-on-premise-internal-networks" title="Permanent link">&para;</a></h4>
+<ul>
+<li>rovera leverages AWS GuardDuty and Cisco Meraki for network security of its on-premise
+  environments.</li>
+<li>AWS GuardDuty and Cisco Meraki features stateful firewall inspection and intrusion
+  detection/prevention (IDS/IPS) of applicable incoming and outgoing network
+  traffic. Attacks and suspicious network activities are blocked automatically.</li>
+<li>rovera IT manager is responsible for configuring the firewall and IDS/IPS
+  rules and review the configuration as least quarterly.</li>
+</ul>
+<h4 id="intrusion-detection-in-aws-cloud-environments">Intrusion Detection in AWS Cloud Environments<a class="headerlink" href="#intrusion-detection-in-aws-cloud-environments" title="Permanent link">&para;</a></h4>
+<p>rovera implemented a real-time threat detection solution by
+monitoring AWS Cloudtrail events and/or VPC flow logs.</p>
+<ul>
+<li>Cloudtrail events are monitored by <strong>AWS GuardDuty and Cisco Meraki</strong></li>
+<li>VPC flow logs are sent to and analyzed by <strong>AWS GuardDuty and Cisco Meraki</strong>.</li>
+</ul>
+<p>Additional monitoring is provided by our infrastructure service provider AWS.</p>
+<h3 id="host-intrusion-detection">Host Intrusion Detection<a class="headerlink" href="#host-intrusion-detection" title="Permanent link">&para;</a></h3>
+<p>Host based intrusion detection is supported via one of the following:</p>
+<ul>
+<li>
+<p>On Windows and macOS systems: <strong>AWS Inspector and Carbon Black PSC</strong> agents for malware
+  detection and behavior-based endpoint threat detection.</p>
+</li>
+<li>
+<p>On Linux servers: <strong>AWS Inspector and Carbon Black PSC</strong> agents for activity monitoring,
+  vulnerability scanning, and threat detection.  This includes all virtual
+  instances running in the cloud environment.</p>
+</li>
+</ul>
+<h3 id="web-application-protection">Web Application Protection<a class="headerlink" href="#web-application-protection" title="Permanent link">&para;</a></h3>
+<p>leverages AWS Services to protect web applications against
+common attacks such as SQL injection, cross-site scripting, and
+denial-of-service (DoS/DDoS) attacks. The services used include AWS Shield, WAF,
+Cloudfront, and/or API Gateway.</p>
+<h3 id="centralized-security-information-and-event-management">Centralized Security Information and Event Management<a class="headerlink" href="#centralized-security-information-and-event-management" title="Permanent link">&para;</a></h3>
+<p>Security events and alerts are aggregated to and correlated by one or both of
+the following solutions:</p>
+<ul>
+<li>JupiterOne</li>
+<li>Internally developed security automation tooling</li>
+</ul>
+<h3 id="threat-intelligence-monitoring">Threat Intelligence Monitoring<a class="headerlink" href="#threat-intelligence-monitoring" title="Permanent link">&para;</a></h3>
+<p><strong>NH-ISAC</strong></p>
+<p>rovera is an active member of the <a href="https://nhisac.org/">National Health Information Sharing and
+Analysis Center (NH-ISAC)</a>.</p>
+<p>rovera Security team is subscribed to receive threat alerts from NH-ISAC.</p>
+<p><strong>Intelligence Feeds</strong></p>
+<p>Additional intelligence feeds are received automatically through some of the 3rd
+party security solutions that have been implemented on the networks and/or
+endpoints. The data gathered through these external intel feeds is automatically
+used by the security solutions to analyze events and generate alerts.</p>
+<p><strong>Regulatory Requirements Updates</strong></p>
+<p>The Security and Privacy Officer actively monitors the regulatory compliance
+landscape for updates to regulations such as HIPAA, PCI and GDPR.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

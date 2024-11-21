@@ -1,0 +1,1899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="rovera Security Policies, Standards, and Procedures">
+      
+      
+      
+        <link rel="canonical" href="http://www.bbc.com/security/risk-mgmt/">
+      
+      
+        <link rel="prev" href="../rar/">
+      
+      
+        <link rel="next" href="../compliance-audit/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>5. Risk Management and Risk Assessment Process - rovera Security PSP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#risk-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="rovera Security PSP" class="md-header__button md-logo" aria-label="rovera Security PSP" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            rovera Security PSP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. Risk Management and Risk Assessment Process
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="rovera Security PSP" class="md-nav__button md-logo" aria-label="rovera Security PSP" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    rovera Security PSP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../program/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Security Program Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../corp-gov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Corporate Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Policy Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Security Architecture and Operating Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Roles, Responsibilities and Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    5. Risk Management and Risk Assessment Process
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    5. Risk Management and Risk Assessment Process
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls and Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Objectives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Management Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceptable-risk-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceptable Risk Levels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Management Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Schedule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-assessment-and-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Assessment and Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-mitigation-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Mitigation and Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Registry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cyber-liability-insurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cyber Liability Insurance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fraud-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fraud Risks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fraud Risks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#potential-frauds-and-likelihood" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potential Frauds and Likelihood
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Compliance Audits and External Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-audit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. System Audits, Monitoring and Assessments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. HR and Personnel Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Facility Access and Physical Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asset-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Asset Inventory Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Data Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-protection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Data Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdlc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Secure Software Development and Product Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ccm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Configuration and Change Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Threat Detection and Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vuln-mgmt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Vulnerability Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mdm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Mobile Device Security and Media Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bcdr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Business Continuity and Disaster Recovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Incident Response
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../breach/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Breach Investigation and Notification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vendor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Third Party Security and Vendor Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Privacy Practice and Consent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ref/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Addendum and References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_27" id="__nav_27_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_27">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../employee-handbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A. Employee Handbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B. Approved Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approved-vendors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C. Approved Vendors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    D. Key Definitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-baa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E. HIPAA Business Associate Agreement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hipaa-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    F. HIPAA Controls Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nist-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    G. NIST Controls Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    H. Privacy Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cookie-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I. Cookie Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdpr-dpa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    J. GDPR Data Processing Agreement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#policy-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls and Procedures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Objectives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Management Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceptable-risk-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceptable Risk Levels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Management Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-management-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management Schedule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-assessment-and-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Assessment and Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-mitigation-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Mitigation and Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Registry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cyber-liability-insurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cyber Liability Insurance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fraud-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fraud Risks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fraud Risks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#potential-frauds-and-likelihood" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potential Frauds and Likelihood
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="risk-management">Risk Management<a class="headerlink" href="#risk-management" title="Permanent link">&para;</a></h1>
+<p><code>2024.1</code></p>
+<p>This policy establishes the scope, objectives, and procedures of rovera&rsquo;s
+information security risk management process. The risk management process is
+intended to support and protect the organization and its ability to fulfill its
+mission.</p>
+<h2 id="policy-statements">Policy Statements<a class="headerlink" href="#policy-statements" title="Permanent link">&para;</a></h2>
+<p>rovera policy requires that:</p>
+<p>(a) A thorough risk assessment must be conducted to evaluate the potential
+threats and vulnerabilities to the confidentiality, integrity, and availability
+of sensitive, confidential and proprietary electronic information it stores,
+transmits, and/or processes.</p>
+<p>(b) Risk assessments must be performed with any major change to rovera&rsquo;s
+business or technical operations and/or supporting infrastructure, no less than
+once per year.</p>
+<p>(c) Strategies shall be developed to mitigate or accept the risks identified in
+the risk assessment process.</p>
+<p>(d) Maintain documentation of all risk assessment, risk management, and risk
+mitigation efforts for a minimum of seven years.</p>
+<h2 id="controls-and-procedures">Controls and Procedures<a class="headerlink" href="#controls-and-procedures" title="Permanent link">&para;</a></h2>
+<h3 id="risk-management-objectives">Risk Management Objectives<a class="headerlink" href="#risk-management-objectives" title="Permanent link">&para;</a></h3>
+<p>rovera has established formal risk analysis and risk management
+processes to</p>
+<ul>
+<li>
+<p>identify risks that may impact its business operations or the confidentiality,
+  integrity and availability of its critical data; and</p>
+</li>
+<li>
+<p>reduce risk to an acceptable level by implementation of mitigation controls.</p>
+</li>
+</ul>
+<p>Unmitigated risk above the pre-defined acceptable level must be reviewed,
+approved and accepted by senior management.</p>
+<h4 id="acceptable-risk-levels">Acceptable Risk Levels<a class="headerlink" href="#acceptable-risk-levels" title="Permanent link">&para;</a></h4>
+<p>Risks that are either low impact or low probability, based on the scoring
+mechanism defined in <a href="cp-risk-assess.md">risk assessment process</a>, are generally
+considered acceptable.</p>
+<p>All other risks must be individually reviewed and managed according to the
+<a href="cp-risk-mgmt.md">risk management process</a>.</p>
+<h3 id="risk-management-process">Risk Management Process<a class="headerlink" href="#risk-management-process" title="Permanent link">&para;</a></h3>
+<p>Risk analysis and risk management are recognized as important components of
+rovera&rsquo;s corporate compliance and information security program.</p>
+<p>rovera&rsquo;s risk management process is developed in accordance with
+the Risk Analysis and Risk Management implementation specifications within the
+Security Management standard and the evaluation standards set forth in the HIPAA
+Security Rule, 45 CFR 164.308(a)(1)(ii)(A), 164.308(a)(1)(ii)(B),
+164.308(a)(1)(i), and 164.308(a)(8).</p>
+<p>Risk assessments are done throughout product life cycles:</p>
+<ul>
+<li>Before the integration of new system technologies and before changes are
+    made to rovera physical and technical safeguards; and (Note that these
+    changes do not include routine updates to existing systems, deployments of
+    new systems created based on previously configured systems, deployments of
+    new Customers, or new code developed for operations and management of the
+    rovera Platform)</li>
+<li>While making changes to rovera physical equipment and facilities that
+    introduce new, untested configurations.</li>
+</ul>
+<p>rovera performs periodic technical and non-technical assessments of the
+security rule requirements as well as in response to environmental or
+operational changes affecting the security of sensitive data.</p>
+<p>rovera implements security measures sufficient to reduce risks and
+vulnerabilities to a reasonable and appropriate level to:</p>
+<ol>
+<li>Ensure the confidentiality, integrity, and availability of all sensitive data
+     rovera receives, maintains, processes, and/or transmits for its
+     Customers;</li>
+<li>Protect against any reasonably anticipated threats or hazards to the
+     security or integrity of Customer data and/or sensitive data;</li>
+<li>Protect against any reasonably anticipated uses or disclosures of Customer
+     data and/or sensitive data that are not permitted or required; and</li>
+<li>Ensure compliance by all workforce members.</li>
+</ol>
+<p>In addition, rovera risk management process requires that:</p>
+<ol>
+<li>Any risk remaining (residual) after other risk controls have been applied,
+   requires sign off by the senior management and rovera&rsquo;s Security Officer.</li>
+<li>All rovera workforce members are expected to fully cooperate with all
+   persons charged with doing risk management work, including contractors and
+   audit personnel. Any workforce member that violates this policy will be
+   subject to disciplinary action based on the severity of the violation, as
+   outlined in the rovera Roles Policy.</li>
+<li>The implementation, execution, and maintenance of the information security
+   risk analysis and risk management process is the responsibility of rovera&rsquo;s
+   Security Officer (or other designated employee), and the identified Risk
+   Management Team.</li>
+<li>All risk management efforts, including decisions made on what controls to put
+   in place as well as those to not put into place, are documented and the
+   documentation is maintained for six years.</li>
+<li>
+<p>The details of the Risk Management Process, including risk assessment,
+   discovery, and mitigation, are outlined in detail below. The process is
+   tracked, measured, and monitored using the following procedures:</p>
+<ol>
+<li>The Security Officer or the Privacy Officer initiates the Risk Management
+   Procedures by creating an Issue in the jira Security Project.</li>
+<li>The Security Officer or the Privacy Officer is assigned to carry out the
+   Risk Management Procedures.</li>
+<li>All findings are documented and linked to the Issue.</li>
+<li>Once the Risk Assessment steps are complete, along with corresponding
+   documentation, the Security Officer approves or rejects the Issue. If the
+   Issue is rejected, it goes back for further review and documentation.</li>
+<li>If the review is approved, the Security Officer then marks the Issue as
+   Done, adding any pertinent notes required.</li>
+</ol>
+</li>
+<li>
+<p>The Risk Management Procedure is monitored on a quarterly basis using jira
+   reporting to assess compliance with above policy.</p>
+</li>
+</ol>
+<p>Third party risk management details including procurement and systems
+acquisition can be found in <a href="../vendor/">§vendor</a>.</p>
+<h4 id="risk-management-schedule">Risk Management Schedule<a class="headerlink" href="#risk-management-schedule" title="Permanent link">&para;</a></h4>
+<p>The two principle components of the risk management process - risk assessment
+and risk mitigation - will be carried out according to the following schedule to
+ensure the continued adequacy and continuous improvement of rovera&rsquo;s
+information security program:</p>
+<ul>
+<li>
+<p>Scheduled Basis - an overall risk assessment of rovera&rsquo;s information system
+  infrastructure will be conducted annually. The assessment process should be
+  completed in a timely fashion so that risk mitigation strategies can be
+  determined and included in the corporate budgeting process.</p>
+</li>
+<li>
+<p>Throughout a System&rsquo;s Development Life Cycle - from the time that a need for a
+  new, untested information system configuration and/or application is
+  identified through the time it is disposed of, ongoing assessments of the
+  potential threats to a system and its vulnerabilities should be undertaken as
+  a part of the maintenance of the system.</p>
+</li>
+<li>
+<p>As Needed - the Security Officer (or other designated employee) or Risk
+  Management Team may call for a full or partial risk assessment in response to
+  changes in business strategies, information technology, information
+  sensitivity, threats, legal liabilities, or other significant factors that
+  affect rovera&rsquo;s Platform.</p>
+</li>
+</ul>
+<h3 id="risk-assessment-and-analysis">Risk Assessment and Analysis<a class="headerlink" href="#risk-assessment-and-analysis" title="Permanent link">&para;</a></h3>
+<p>The intent of completing a risk assessment is to determine potential threats and
+vulnerabilities and the likelihood and impact should they occur. The output of
+this process helps to identify appropriate controls for reducing or eliminating
+risk.</p>
+<ul>
+<li>
+<p>Step 1. System Characterization</p>
+<ul>
+<li>
+<p>The first step in assessing risk is to define the scope of the effort. To
+  do this, identify where sensitive data is received, maintained, processed, or
+  transmitted. Using information-gathering techniques, the rovera Platform
+  boundaries are identified.</p>
+</li>
+<li>
+<p>Output - Characterization of the rovera Platform system assessed, a good
+  picture of the Platform environment, and delineation of Platform
+  boundaries.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 2. Threat Identification</p>
+<ul>
+<li>
+<p>Potential threats (the potential for threat-sources to successfully
+  exercise a particular vulnerability) are identified and documented. All
+  potential threat-sources through the review of historical incidents and
+  data from intelligence agencies, the government, etc., to help generate a
+  list of potential threats.</p>
+</li>
+<li>
+<p>Output - A threat list containing a list of threat-sources that could
+  exploit Platform vulnerabilities.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 3. Vulnerability Identification</p>
+<ul>
+<li>
+<p>Develop a list of technical and non-technical Platform vulnerabilities
+  that could be exploited or triggered by potential threat-sources.
+  Vulnerabilities can range from incomplete or conflicting policies that
+  govern an organization&rsquo;s computer usage to insufficient safeguards to
+  protect facilities that house computer equipment to any number of
+  software, hardware, or other deficiencies that comprise an organization&rsquo;s
+  computer network.</p>
+</li>
+<li>
+<p>Output - A list of the Platform vulnerabilities (observations) that could
+  be exercised by potential threat-sources.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 4. Control Analysis</p>
+<ul>
+<li>
+<p>Document and assess the effectiveness of technical and non-technical
+  controls that have been or will be implemented by rovera to minimize or
+  eliminate the likelihood / probability of a threat-source exploiting a
+  Platform vulnerability.</p>
+</li>
+<li>
+<p>Output - List of current or planned controls (policies, procedures,
+  training, technical mechanisms, insurance, etc.) used for the Platform to
+  mitigate the likelihood of a vulnerability being exercised and reduce the
+  impact of such an adverse event.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 5. Likelihood Determination</p>
+<ul>
+<li>
+<p>Determine the overall likelihood rating that indicates the probability
+  that a vulnerability could be exploited by a threat-source given the
+  existing or planned security controls.</p>
+</li>
+<li>
+<p>Output - Likelihood rating of low (.1), medium (.5), or high (1). Refer to
+  the NIST SP 800-30 definitions of low, medium, and high.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 6. Impact Analysis</p>
+<ul>
+<li>
+<p>Determine the level of adverse impact that would result from a threat
+  successfully exploiting a vulnerability. Factors of the data and systems
+  to consider should include the importance to rovera&rsquo;s mission;
+  sensitivity and criticality (value or importance); costs associated; loss
+  of confidentiality, integrity, and availability of systems and data.</p>
+</li>
+<li>
+<p>Output - Magnitude of impact rating of low (10), medium (50), or high
+  (100). Refer to the NIST SP 800-30 definitions of low, medium, and high.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 7. Risk Determination</p>
+<ul>
+<li>
+<p>Establish a risk level. By multiplying the ratings from the likelihood
+  determination and impact analysis, a risk level is determined. This
+  represents the degree or level of risk to which an IT system, facility, or
+  procedure might be exposed if a given vulnerability were exercised. The
+  risk rating also presents actions that senior management must take for
+  each risk level.</p>
+</li>
+<li>
+<p>Output - Risk level of low (1-10), medium (&gt;10-50) or high (&gt;50-100).
+  Refer to the NIST SP 800-30 definitions of low, medium, and high.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 8. Control Recommendations</p>
+<ul>
+<li>
+<p>Identify controls that could reduce or eliminate the identified risks, as
+  appropriate to the organization&rsquo;s operations to an acceptable level.
+  Factors to consider when developing controls may include effectiveness of
+  recommended options (i.e., system compatibility), legislation and
+  regulation, organizational policy, operational impact, and safety and
+  reliability. Control recommendations provide input to the risk mitigation
+  process, during which the recommended procedural and technical security
+  controls are evaluated, prioritized, and implemented.</p>
+</li>
+<li>
+<p>Output - Recommendation of control(s) and alternative solutions to
+  mitigate risk.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 9. Results Documentation</p>
+<ul>
+<li>
+<p>Results of the risk assessment are documented in an official report,
+  spreadsheet, or briefing and provided to senior management to make
+  decisions on policy, procedure, budget, and Platform operational and
+  management changes.</p>
+</li>
+<li>
+<p>Output - A risk assessment report that describes the threats and
+  vulnerabilities, measures the risk, and provides recommendations for
+  control implementation.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="risk-mitigation-and-monitoring">Risk Mitigation and Monitoring<a class="headerlink" href="#risk-mitigation-and-monitoring" title="Permanent link">&para;</a></h3>
+<p>Risk mitigation involves prioritizing, evaluating, and implementing the
+appropriate risk-reducing controls recommended from the Risk Assessment process
+to ensure the confidentiality, integrity and availability of rovera Platform
+data. Determination of appropriate controls to reduce risk is dependent upon the
+risk tolerance of the organization consistent with its goals and mission.</p>
+<ul>
+<li>
+<p>Step 1. Prioritize Actions</p>
+<ul>
+<li>
+<p>Using results from Step 7 of the Risk Assessment, sort the threat and
+  vulnerability pairs according to their risk-levels in descending order.
+  This establishes a prioritized list of actions needing to be taken, with
+  the pairs at the top of the list getting/requiring the most immediate
+  attention and top priority in allocating resources</p>
+</li>
+<li>
+<p>Output - Actions ranked from high to low</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 2. Evaluate Recommended Control Options</p>
+<ul>
+<li>
+<p>Although possible controls for each threat and vulnerability pair are
+  arrived at in Step 8 of the Risk Assessment, review the recommended
+  control(s) and alternative solutions for reasonableness and
+  appropriateness. The feasibility (e.g., compatibility, user acceptance,
+  etc.) and effectiveness (e.g., degree of protection and level of risk
+  mitigation) of the recommended controls should be analyzed. In the end,
+  select a &ldquo;most appropriate&rdquo; control option for each threat and
+  vulnerability pair.</p>
+</li>
+<li>
+<p>Output - list of feasible controls</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 3. Conduct Cost-Benefit Analysis</p>
+<ul>
+<li>
+<p>Determine the extent to which a control is cost-effective. Compare the
+  benefit (e.g., risk reduction) of applying a control with its subsequent
+  cost of application. Controls that are not cost-effective are also
+  identified during this step. Analyzing each control or set of controls in
+  this manner, and prioritizing across all controls being considered, can
+  greatly aid in the decision-making process.</p>
+</li>
+<li>
+<p>Output - Documented cost-benefit analysis of either implementing or not
+  implementing each specific control</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 4. Select Control(s)</p>
+<ul>
+<li>
+<p>Taking into account the information and results from previous steps,
+  rovera&rsquo;s mission, and other important criteria, the Risk Management Team
+  determines the best control(s) for reducing risks to the information
+  systems and to data confidentiality, integrity, and availability.
+  These controls may consist of a mix of administrative, physical, and/or
+  technical safeguards.</p>
+</li>
+<li>
+<p>Output - Selected control(s)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 5. Assign Responsibility</p>
+<ul>
+<li>
+<p>Identify the workforce members with the skills necessary to implement each
+  of the specific controls outlined in the previous step, and assign their
+  responsibilities. Also identify the equipment, training and other
+  resources needed for the successful implementation of controls. Resources
+  may include time, money, equipment, etc.</p>
+</li>
+<li>
+<p>Output - List of resources, responsible persons and their assignments</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 6. Develop Safeguard Implementation Plan</p>
+<ul>
+<li>
+<p>Develop an overall implementation or action plan and individual project
+  plans needed to implement the safeguards and controls identified. The
+  Implementation Plan should contain the following information:</p>
+<ul>
+<li>Each risk or vulnerability/threat pair and risk level;</li>
+<li>Prioritized actions;</li>
+<li>The recommended feasible control(s) for each identified risk;</li>
+<li>Required resources for implementation of selected controls;</li>
+<li>Team member responsible for implementation of each control;</li>
+<li>Start date for implementation</li>
+<li>Target date for completion of implementation;</li>
+<li>Maintenance requirements.</li>
+</ul>
+</li>
+<li>
+<p>The overall implementation plan provides a broad overview of the safeguard
+  implementation, identifying important milestones and timeframes, resource
+  requirements (staff and other individuals&rsquo; time, budget, etc.),
+  interrelationships between projects, and any other relevant information.
+  Regular status reporting of the plan, along with key metrics and success
+  indicators should be reported to rovera Senior Management.</p>
+</li>
+<li>
+<p>Individual project plans for safeguard implementation may be developed and
+  contain detailed steps that resources assigned carry out to meet
+  implementation timeframe and expectations. Additionally, consider
+  including items in individual project plans such as a project scope, a
+  list deliverables, key assumptions, objectives, task completion dates and
+  project requirements.</p>
+</li>
+<li>
+<p>Output - Safeguard Implementation Plan</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 7. Implement Selected Controls</p>
+<ul>
+<li>
+<p>As controls are implemented, monitor the affected system(s) to verify that
+  the implemented controls continue to meet expectations. Elimination of all
+  risk is not practical. Depending on individual situations, implemented
+  controls may lower a risk level but not completely eliminate the risk.</p>
+</li>
+<li>
+<p>Continually and consistently communicate expectations to all Risk
+  Management Team members, as well as senior management and other key people
+  throughout the risk mitigation process. Identify when new risks are
+  identified and when controls lower or offset risk rather than eliminate
+  it.</p>
+</li>
+<li>
+<p>Additional monitoring is especially crucial during times of major
+  environmental changes, organizational or process changes, or major
+  facilities changes.</p>
+</li>
+<li>
+<p>If risk reduction expectations are not met, then repeat all or a part of
+  the risk management process so that additional controls needed to lower
+  risk to an acceptable level can be identified.</p>
+</li>
+<li>
+<p>Output - Residual Risk documentation</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="risk-registry">Risk Registry<a class="headerlink" href="#risk-registry" title="Permanent link">&para;</a></h3>
+<p>rovera Security team maintains a registry of risks, captured and kept updated</p>
+<ul>
+<li>in a document on company SharePoint; and/or</li>
+<li>in the security operations tool/database.</li>
+</ul>
+<p>The risk registry includes all risks and threats identified during annual risk
+assessment and all interim reviews.</p>
+<h3 id="cyber-liability-insurance">Cyber Liability Insurance<a class="headerlink" href="#cyber-liability-insurance" title="Permanent link">&para;</a></h3>
+<p>rovera holds cyber liability insurance with sufficient coverage
+based on the organization&rsquo;s risk profile.</p>
+<p>Our current cyber policy is covered by .</p>
+<h3 id="fraud-risks">Fraud Risks<a class="headerlink" href="#fraud-risks" title="Permanent link">&para;</a></h3>
+<p>Due to its transparent culture, team size and operating model, including
+separation of duties, comprehensive controls, continuous monitoring and auditing,
+rovera considers its fraud-related risk to be very low.</p>
+<p>rovera hires  to perform accounting services and
+annual financial audits.</p>
+<p>Fraud risk is re-evaluated as part of the organization&rsquo;s annual risk assessment.
+The assessment considers the following aspects of fraud:</p>
+<ul>
+<li>Pressures and/or incentives</li>
+<li>Opportunities</li>
+<li>Rationalities</li>
+</ul>
+<p>Financial-related fraud assessment is led by the COO/CFO.</p>
+<p>IT-related fraud assessment is led by the Compliance Officer or CISO.</p>
+<h4 id="potential-frauds-and-likelihood">Potential Frauds and Likelihood<a class="headerlink" href="#potential-frauds-and-likelihood" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Fraud Risk</th>
+<th>Likelihood</th>
+<th>In Place Controls/Monitors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fraudulent Financial Reporting</td>
+<td>Low</td>
+<td>Monthly executive team reviews of business plan and revenue; Financial review by external accounting firm</td>
+</tr>
+<tr>
+<td>Misappropriation of Assets</td>
+<td>Low</td>
+<td>Expense reporting and asset tracking in place</td>
+</tr>
+<tr>
+<td>Regulatory and Legal Misconduct</td>
+<td>Low</td>
+<td>Audit and compliance policies and processes, including whistleblower procedures; engage external law firm to review legal conduct</td>
+</tr>
+<tr>
+<td>Payroll Fraud</td>
+<td>Low</td>
+<td>Payroll is reviewed by at least two people internally as well as by external accounting firm</td>
+</tr>
+<tr>
+<td>Kickbacks / Conflict of Interest</td>
+<td>Low</td>
+<td>Team-based vendor review and selection process</td>
+</tr>
+<tr>
+<td>Misuse of Cloud Resources</td>
+<td>Low</td>
+<td>Continuous resource monitoring for all cloud accounts and regions and expense monitoring</td>
+</tr>
+<tr>
+<td>Other IT Fraud</td>
+<td>Low</td>
+<td>IT assets and resources tracking</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
